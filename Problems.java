@@ -62,6 +62,26 @@ class Problems{
   }
   
   public static String Q2(String name){
+    System.out.print("\033[H\033[2J");  
+    System.out.flush();
+
+    System.out.println(purple + "      Now you shall initialize and declare a 2D int array.\n");
+
+    System.out.println(blue + "   Well now, -name-, you find yourself under the ocean. How? Idk. Looking around, you find all the fishes living in little coral homes. It’s rather sweet. In each home is a certain number of windows and a certain number of doors. You might ask, why would a fish want more than 1 or 2 doors? Well you aren’t a fish so you wouldn’t understand. ");
+    System.out.println("   You count for 4 homes. Here are your numbers -name-:");
+    System.out.println("   5 windows and 1 door\n   8 windows and 3 doors\n   200 windows and 5 doors\n   0 windows and 18 doors");
+    
+    System.out.println("\n   As you ponder how to write an array within another, a lionfish swims up and hands you a piece of waterproof paper that says: {{5,1}, …}\n");
+
+    System.out.println(green + "   Now enter your code: (Write it as one line.)" + white);
+    read.nextLine();
+
+    System.out.println(purple + "\n      It should look something like this:");
+    System.out.println(white + "int[][] fishHomes = {{5,1}, {8,3}, {200,5}, {0,18}};");
+
+    System.out.println(purple + "      Enter y if completed correctly, else enter n: " + white);
+
+
     return input;
   }
   
