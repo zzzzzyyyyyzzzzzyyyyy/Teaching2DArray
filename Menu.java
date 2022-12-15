@@ -23,8 +23,8 @@ class Menu{
       System.out.println("Please type in number of activity: ");
       System.out.println("0 - Initializing an array " + done[0]);
       System.out.println("1 - Initializing an empty 2D array " + done[1]);
-      System.out.println("2 - Initializing a 2D int array" + done[2]);
-      System.out.println("3 - Calling specific indices" + done[3]);
+      System.out.println("2 - Initializing a 2D int array " + done[2]);
+      System.out.println("3 - Calling specific indices " + done[3]);
       System.out.println("4 - Nested looping and adding to an array " + done[4]);
       System.out.println("5 - Better naviagate 2D arrays " + done[5]);
   
