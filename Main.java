@@ -9,6 +9,7 @@ class Main {
     //Intro
     System.out.print("\nHi. So you have come here to learn 2D arrays. Fabulous. However, what is your name? Or not your name. Just input something: ");
       
+    //makes sure user doesn't input nothing, but technically they can, so oh well
     String name = read.nextLine();
     while(name.equals("") || name.equals(" ")){
       System.out.print("No. : ");
@@ -30,7 +31,8 @@ class Main {
 
     System.out.println("\n\n\nGood job! You finished all the stuff! Good luck and bye bye now!");
 
-    //fancy print outs. it looks messed up here, but it gets fixed when actually printing out because the extra backslashes go away
+    //fancy print outs. 
+    //it looks messed up here, but it gets fixed when actually printing out because the extra backslashes go away
     System.out.println("                                               888");            
     System.out.println("                                               888"); 
     System.out.println("                                               888"); 

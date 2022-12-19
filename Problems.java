@@ -3,36 +3,43 @@ import java.util.Arrays;
 
 class Problems{
 
+  //colors for text
   public static final String purple = "\u001B[35m";
   public static final String blue = "\u001B[34m";
   public static final String green = "\u001B[32m";
   public static final String white = "\u001B[37m";
+  
   public static final Scanner read = new Scanner(System.in);
   public static String input = "";
 
-  public static String Q0(String name){
+  public static String Q0(String name){ //each question section is nearly the same, so the comments can just repeat
     //to clear screen
     System.out.print("\033[H\033[2J");  
     System.out.flush(); 
     
+    ///printing out instructions
     System.out.println(purple + "      Let’s first try initializing and declaring a usual array, " + name + ".\n      (As a reminder, the way to do it (in one line at least) is: int[] name = {0, 1, 2, 3, 4}; )");
 
     System.out.println(blue + "\n   As you are taking a nice walk, a squirrel runs up to you and asks you to make an array of 6 numbers. These numbers need to correspond to the amount of acorns in each of their neighbors homes. After asking the squirrel’s neighbors how many acorns they have, you realize that you have no clue why you can all of a sudden talk to squirrels, but then you write down 6, 18, 3, 14, -2. (The last one is in debt.)");
 
+    //where user inputs their code
     System.out.println(green + "\n   Now enter your code: (Write it as one line.)" + white);
     read.nextLine();
 
     System.out.println(purple + "\n      It should look something like this: " + white);
     System.out.println(white + "int[] acorns = {6, 18, 3, 14, -2};");
 
+    //input is whether they did it right or not
     System.out.println(purple + "\n      Now this is gonna be a test of faith, but enter y if your code is similar/the same. If you have doubts, check somewhere else. If not, enter n.\n      (This is how the program will mark if you finished a section incorrectly.):" + white);
     input = read.nextLine();
     
+    //makign sure input is valid
     while(!input.equals("y") && !input.equals("n")){
       System.out.println(purple + "Invalid, please enter y or n: " + white);
       input = read.nextLine();
     }
     
+    //returns to menu as y or n, where checkmark is determiend
     return input;
     
   }

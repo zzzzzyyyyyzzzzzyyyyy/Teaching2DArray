@@ -20,6 +20,7 @@ class Menu{
       }
     }
 
+    //while the program should continue, meaning not every question has checkmarks
     while(con){
       //clearing the screen
       System.out.print("\033[H\033[2J");  

@@ -40,12 +40,13 @@ public class Animation {
             //comments in first section can just be repeated per each section since nearly same thing
             // -------------------------------------------------------------------------- //
             Thread.sleep(3000); // so image stays
+            //clearing screen
             System.out.print("\033[H\033[2J");  
             System.out.flush(); 
             System.out.println();
             //  0   1
             map[y][x+1] = "😃"; // sets new spot for the face
-            x += 1;
+            x += 1; //honestly coudle set before previous line
             map[0][0] = "⬛"; // sets previous spot to be "empty"
             print(map);
             // typing out below info so user knows what is happenign with the indices
