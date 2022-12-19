@@ -3,22 +3,41 @@ import java.util.Scanner;
 
 class Menu{
 
-  //private String choice;
+  //this is adding the checkmarks at the end if a questions has been correctly completed
   private static String[] done = {"","","","","",""};// = new String[]{"","","","","",""};
 
-  public Menu(){
-    //choice = "";
-  }
-  
+  // like the name, prints out the menu and tells users what to enter. from here calls the questions
   public static void printMenu(String name){
 
-    // ✔
     Scanner read = new Scanner(System.in);
 
-    while(true){
+    //checker to see if user has all checkmarks
+    boolean con = false;
+    for(String y : done){
+      //if a single index in done is not a y, con, short for continue, is true, then the user should continue the program
+      if(!y.equals("y")){
+        con = true;
+      }
+    }
+
+    while(con){
+      //clearing the screen
       System.out.print("\033[H\033[2J");  
       System.out.flush(); 
+
+      //checking if all assignments done
+      con = false;
+      for(String y : done){
+        //if a single index in done is not a y, con, short for continue, is true, then the user should continue the program
+        if(!y.equals("✔")){
+          con = true;
+        }
+      }
+      if(con == false){ // breaks out of while loop where menu is running
+        break;
+      }
       
+      //question + ✔
       System.out.println("What level would you like to try to do " + name + "?" );
       System.out.println("Please type in number of activity: ");
       System.out.println("0 - Initializing an array " + done[0]);
@@ -28,12 +47,16 @@ class Menu{
       System.out.println("4 - Nested looping and adding to an array " + done[4]);
       System.out.println("5 - Better naviagate 2D arrays " + done[5]);
   
+      //checker if input isn't a number
       String input = read.nextLine();
       while(!input.equals("0") && !input.equals("1") && !input.equals("2") && !input.equals("3") && !input.equals("4") && !input.equals("5")){
         System.out.println("\nThat is not valid " + name + ".");
         input = read.nextLine();
       }
       
+      // if statements for which question the user wishes to enter
+      // the second if in each one is calling the respective function in Problems and that returns y or n, which it checks to put ✔ or not
+      // if a user accidently puts ✔, they can also go back into a problem and change y to n, and get rid of the ✔
       if(input.equals("0")){
         if(Problems.Q0(name).equals("y")){
           done[0] = "✔";
@@ -82,8 +105,9 @@ class Menu{
           done[5] = "";
         }
       }
-    }
-    
+    }   
+
+    Main.congrat(); // function in main that is the end
+
   }
-  
 }

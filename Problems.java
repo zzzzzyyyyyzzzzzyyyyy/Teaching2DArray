@@ -11,6 +11,7 @@ class Problems{
   public static String input = "";
 
   public static String Q0(String name){
+    //to clear screen
     System.out.print("\033[H\033[2J");  
     System.out.flush(); 
     
