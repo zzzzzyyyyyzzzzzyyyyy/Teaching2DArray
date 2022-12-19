@@ -196,6 +196,12 @@ class Problems{
       System.out.println(purple + "Invalid, please enter y or n: " + white);
       input = read.nextLine();
     }
+
+    System.out.println(blue + "\n   Would you like to see how the movements work? Enter y now, or the program will just continue: " + white);
+    String see = read.nextLine();
+    if(see.equals("y")){
+      Animation.move();
+    }
     
     return input;
   }
