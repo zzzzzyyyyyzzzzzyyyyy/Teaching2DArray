@@ -41,6 +41,7 @@ class Problems{
     System.out.flush(); 
 
     System.out.println(purple + "      Now, "+ name + ", you are going to initialize (only initialize!) an empty 2D array.");
+    System.out.println("      (Note: Let's also clarify that these are 2D arrays, not arraylists.)");
 
     System.out.println(blue + "\n   This time you find yourself in a grass field. How’d you get here, you don’t know. The sun is shining, Cotton Eye Joe. This field is super empty. You decide to count how big the field is, and it is 3 by 3 miles. As you finish counting, a goat with glowing horns walks up to you to impart wisdom, “Add an extra [ ] when initializing a 2D array.”");
 
@@ -91,20 +92,81 @@ class Problems{
   }
   
   public static String Q3(String name){
+    System.out.print("\033[H\033[2J");  
+    System.out.flush();
+
+    System.out.println(purple + "      It is important to know how to call specific indexes of a 2D array.\n");
+
+    System.out.println(blue + "   Ok so you remember the squirrel from before? Well apparently they were actually planning to rob their neighbors, but only wished to visit the house with the most acorns so they would be less likely to get caught. Anyways they got found out and ran to a different forest and would like you to visit them. They gave you the coordinates: 14, 19.");
+    System.out.println("   You wanted to make a little map for the way there, so you wanted to initialize an array big enough so the squirrel’s house could be plotted. You also want to call and print out from this array the exact spot that the squirrel's house is.");
+    System.out.println("   (Note: If you are testing somewhere else, you will get null when printing it.)");
+
+    System.out.println(green + "   Now enter your code: (Write it as two lines.)" + white);
+    read.nextLine();
+    read.nextLine();
+
+    System.out.println(purple + "\n      It should look something like this:");
+    System.out.println(white + "String[][] squirrelForest = new String[15][20];");
+    System.out.println("System.out.println(squirrelForest[14][19]);");
+
+    System.out.println(purple + "\n      Enter y if completed correctly, else enter n: " + white);
+    input = read.nextLine();
+
+    while(!input.equals("y") && !input.equals("n")){
+      System.out.println(purple + "Invalid, please enter y or n: " + white);
+      input = read.nextLine();
+    }
+
     return input;
   }
   
   public static String Q4(String name){
+    System.out.print("\033[H\033[2J");  
+    System.out.flush();
+
+    System.out.println(purple + "      Alright " + name + ", next is learning how to loop through a 2D array and adding numbers. For this exercise, remember how for loops work and use them. You will have to put a for loop within a for loop.\n");
+
+    System.out.println(blue + "   This time you are walking through a space station and a strange alien strolls up to you. They tell you that they like numbers with patterns. You ask them how they got onto a human space station. They tell you to make an array of 25 spots that looks like this:");
+    System.out.println("   0 1 2 3 4\n   1 2 3 4 5\n   2 3 4 5 6\n   3 4 5 6 7\n   4 5 6 7 8\n");
+    System.out.println("They also give you, what they say, is a hint: array[i][j] = i + j;\nThe most effective way to create this would be to have nested loops.");
+
+    System.out.println(green + "   Now enter your code: (When you are done, add a line with the word done and enter.)" + white);
+    String user = read.nextLine();
+    while(!user.equals("done")){
+      user = read.nextLine();
+    }
+
+    System.out.println(purple + "\n      It should look something like this:");
+    System.out.println(white + "int[][] nums = new int[5][5];");
+    System.out.println();
+    System.out.println("for(int i = 0; i < 5; i++){");
+    System.out.println("   for(int j = 0; j < 5; j++){");
+    System.out.println("     nums[i][j] = i + j;");
+    System.out.println("   }");
+    System.out.println("}");
+    System.out.println();
+    System.out.println("for(int i = 0; i < 5; i++){");
+    System.out.println("   for(int j = 0; j < 5; j++){");
+    System.out.println("     System.out.print(String.valueOf(nums[i][j]) + \" \");");
+    System.out.println("   }");
+    System.out.println("     System.out.println();");
+    System.out.println("}");
+
+    System.out.println(purple + "\n      Enter y if completed correctly, else enter n (The printing out isn’t as important as long as you know the grid is the same): " + white);
+    input = read.nextLine();
+
+    while(!input.equals("y") && !input.equals("n")){
+      System.out.println(purple + "Invalid, please enter y or n: " + white);
+      input = read.nextLine();
+    }
+    
     return input;
   }
   
   public static String Q5(String name){
+    
+    
     return input;
   }
   
 }
-
-/*
-    System.out.println("   (Note: Let's also clarify that these are 2D arrays, not arraylists.)");
-*/
-
