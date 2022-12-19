@@ -24,13 +24,13 @@ class Main {
 
   //to congratulate user for finishng all taks correctly (supposedly)
   public static void congrat(){
-    // to clear screen, but when i'm testing it, it seems to bring everything back, welp
+    // to clear screen, but since it's the end of the program, it just brings everything back, welp
     System.out.print("\033[H\033[2J");  
     System.out.flush();
 
-    System.out.println("Good job! You finished all the stuff! Good luck and bye bye now!");
+    System.out.println("\n\n\nGood job! You finished all the stuff! Good luck and bye bye now!");
 
-    //fancy print outs
+    //fancy print outs. it looks messed up here, but it gets fixed when actually printing out because the extra backslashes go away
     System.out.println("                                               888");            
     System.out.println("                                               888"); 
     System.out.println("                                               888"); 
@@ -45,7 +45,7 @@ class Main {
 
 
     // pikachu
-    System.out.println("`;-.          ___,");
+    System.out.println("`;-.         ___,");
     System.out.println("`.`\\_...._/`.-\"`");
     System.out.println("  \\        /      ,");
     System.out.println("  /()   () \\    .' `-._");
@@ -57,6 +57,6 @@ class Main {
     System.out.println("  \\    ,     ;-`");
     System.out.println("   >   \\    /");
     System.out.println("  (_,-'`> .'");
-    System.out.println("jgs      (_,'");
+    System.out.println("jgs    (_,'");
   }
 }

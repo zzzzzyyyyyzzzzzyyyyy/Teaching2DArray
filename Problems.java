@@ -207,4 +207,36 @@ class Problems{
     return input;
   }
   
+  public static String Q6(String name){
+    System.out.print("\033[H\033[2J");  
+    System.out.flush();
+
+    System.out.println(purple + "      How about learning 3D arrays, " + name +"?\n");
+
+    System.out.println(blue + "   After all your adventures you wish to take a break, and take a nice nap on a couch. You wake up and find your couch is in the middle of a disco club where the lights are actually cool looking fireflies. The goat with glowing horns from before has appeared once more!");
+    System.out.println("   Sir Goatington, as you have now found out, explains that the air is empty space and the fireflies each take up the same amount of space, which is not not empty. Goatington explains that he wants you to make a 3 dimensional array (5 x 4 x 3) and set 3 points where fireflies appear.");
+    System.out.println("   (Let’s just say that they can be anywhere, so you can make the spots random.)");
+
+    System.out.println(purple + "\n      Just like you added a second [ ] for a 2D array. Now add a third one!");
+
+    System.out.println(green + "\n   Now enter your code: (When you are done, add a line with the word done and enter.)" + white);
+    String user = read.nextLine();
+    while(!user.equals("done")){
+      user = read.nextLine();
+    }
+
+    System.out.println(purple + "\n      It should look something like this:");
+    System.out.println(white + "String[][][] fireflies = new String[5][4][3];\nfireflies[2][3][1] = \"firefly here\";\nfireflies[4][0][2] = \"firefly here\";\nfireflies[0][1][0] = \"firefly here\";");
+
+    System.out.println(purple + "\n      Enter y if completed correctly, else enter n: " + white);
+    input = read.nextLine();
+
+    while(!input.equals("y") && !input.equals("n")){
+      System.out.println(purple + "Invalid, please enter y or n: " + white);
+      input = read.nextLine();
+    }
+    
+    return input;
+  }
+
 }

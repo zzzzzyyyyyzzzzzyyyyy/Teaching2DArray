@@ -4,7 +4,7 @@ import java.util.Scanner;
 class Menu{
 
   //this is adding the checkmarks at the end if a questions has been correctly completed
-  private static String[] done = {"","","","","",""};// = new String[]{"","","","","",""};
+  private static String[] done = {"","","","","","",""};// = new String[]{"","","","","",""};
 
   // like the name, prints out the menu and tells users what to enter. from here calls the questions
   public static void printMenu(String name){
@@ -46,10 +46,11 @@ class Menu{
       System.out.println("3 - Calling specific indices " + done[3]);
       System.out.println("4 - Nested looping and adding to an array " + done[4]);
       System.out.println("5 - Better naviagate 2D arrays " + done[5]);
+      System.out.println("6 - Initializing a 3D array " + done[6]);
   
       //checker if input isn't a number
       String input = read.nextLine();
-      while(!input.equals("0") && !input.equals("1") && !input.equals("2") && !input.equals("3") && !input.equals("4") && !input.equals("5")){
+      while(!input.equals("0") && !input.equals("1") && !input.equals("2") && !input.equals("3") && !input.equals("4") && !input.equals("5") && !input.equals("6")){
         System.out.println("\nThat is not valid " + name + ".");
         input = read.nextLine();
       }
@@ -103,6 +104,14 @@ class Menu{
         }
         else{
           done[5] = "";
+        }
+      }
+      else if(input.equals("6")){
+        if(Problems.Q6(name).equals("y")){
+          done[6] = "✔";
+        }
+        else{
+          done[6] = "";
         }
       }
     }   
