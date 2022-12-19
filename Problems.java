@@ -101,7 +101,7 @@ class Problems{
     System.out.println("   You wanted to make a little map for the way there, so you wanted to initialize an array big enough so the squirrel’s house could be plotted. You also want to call and print out from this array the exact spot that the squirrel's house is.");
     System.out.println("   (Note: If you are testing somewhere else, you will get null when printing it.)");
 
-    System.out.println(green + "   Now enter your code: (Write it as two lines.)" + white);
+    System.out.println(green + "\n   Now enter your code: (Write it as two lines.)" + white);
     read.nextLine();
     read.nextLine();
 
@@ -130,7 +130,7 @@ class Problems{
     System.out.println("   0 1 2 3 4\n   1 2 3 4 5\n   2 3 4 5 6\n   3 4 5 6 7\n   4 5 6 7 8\n");
     System.out.println("They also give you, what they say, is a hint: array[i][j] = i + j;\nThe most effective way to create this would be to have nested loops.");
 
-    System.out.println(green + "   Now enter your code: (When you are done, add a line with the word done and enter.)" + white);
+    System.out.println(green + "\n   Now enter your code: (When you are done, add a line with the word done and enter.)" + white);
     String user = read.nextLine();
     while(!user.equals("done")){
       user = read.nextLine();
@@ -164,7 +164,38 @@ class Problems{
   }
   
   public static String Q5(String name){
-    
+    System.out.print("\033[H\033[2J");  
+    System.out.flush();
+
+    System.out.println(purple + "      Let’s learn to better navigate through an array if you need to get to a specific spot.\n");
+
+    System.out.println(blue + "   This time you find yourself in a fantasy cave. How is it different from a normal cave? Because now spooky scary spiders aren’t your only problem, it’s groovy spooky scary skeletons. On a pedestal is a map:");
+    System.out.println("                              😃⬛⬛👾⬛");
+    System.out.println("                              ⬛⬛🦴💎🦇");
+    System.out.println("                              👾⬛⬛⬛⬛");
+    System.out.println("                              ⬛⬛🦇⬛🦴");
+    System.out.println("                              ⬛🦴⬛👾⬛");
+
+    System.out.println("   Assuming you don’t know teleportation, you can only traverse in one direction at a time (not just 1 square), avoiding the skeletons, bats, and weird purple creatures to get the huge diamond.");
+
+    System.out.println(purple + "\n      The way this shall work is you shall type in the indices of the spot you want the character to move. However, as you type in each set of indices, it must be an addition to the previous one, not a new spot. (Ex. [0,0] = [y,x] , and to move is [y+3, x] or [y,x-1].) You can assume that every round y and x are set to the previous value. (Ex. If you type [y+2, x], you can now assume that y += 2.)");
+
+    System.out.println(green + "\n    Now enter your code: (When you are done, add a line with the word done and enter. Only 5 lines are needed, but add more for clarification if needed.)" + white);
+    String user = read.nextLine();
+    while(!user.equals("done")){
+      user = read.nextLine();
+    }
+
+    System.out.println(purple + "\n      It should look something like this:");
+    System.out.println(white + "// y = 0\n// x = 0\nmap[y,x]\nmap[y][x+1]\nmap[y+2][x]\nmap[y][x+2]\nmap[y-1][x]\n");
+
+    System.out.println(purple + "\n      Enter y if completed correctly, else enter n: " + white);
+    input = read.nextLine();
+
+    while(!input.equals("y") && !input.equals("n")){
+      System.out.println(purple + "Invalid, please enter y or n: " + white);
+      input = read.nextLine();
+    }
     
     return input;
   }
