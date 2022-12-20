@@ -16,6 +16,14 @@ class Main {
       name = read.nextLine();
     }
 
+    //checks if game should begin instead of teaching process
+    if(name.equals("sunny")){
+      //calls the game
+      Game.game();
+      //forces the program to end instead of going back
+      System.exit(0);
+    }
+
     System.out.println("-------------------------");
 
     //enters main menu where selection of questions happen. doesn't come back
@@ -60,5 +68,8 @@ class Main {
     System.out.println("   >   \\    /");
     System.out.println("  (_,-'`> .'");
     System.out.println("jgs    (_,'");
+
+    //giving secret name to do a game
+    System.out.println("I wonder what happens if you restart the program and make your name: sunny");
   }
 }
