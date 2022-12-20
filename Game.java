@@ -139,7 +139,7 @@ public class Game {
 
 
     /*
-    I'll be honest, going to a blue cloud crashes the program. No errors show up it just doesn't do anything. I spent forever just trying to make it move correctly and print the correct emoji behind it i can't deal with these problems anymore. may the user be smart enough not to break the program, cause i ain't got enough energy left to fix it. apologies - 1:44 AM me
+    I'll be honest, going to a blue cloud crashes the program. No errors show up it just doesn't do anything. I spent forever just trying to make it move correctly and print the correct emoji behind it i can't deal with these problems anymore. may the user be smart enough not to break the program, cause i ain't got enough energy left to fix it. apologies - 2:04 AM me
     */
     /*
     Some of the indexing with locations and changing the emojis doesn't even completely make sense to me becuase it's too much to follow. when i was writing it, i and the program knew what it meant, now only the program knows.
